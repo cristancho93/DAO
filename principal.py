@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from fabrica import *
-
+from Util.JSONconexion import JsonConexion
 
 if __name__ == '__main__':
     print("seleccione una fabrica: \n\t 0 - AMD \n\t 1 - Intel \n\t 2 - Alien ")
@@ -15,3 +15,6 @@ if __name__ == '__main__':
     for p in partes:
         p.implementacion()
         p.operacion()
+
+    JsonConexion = JsonConexion();
+    JsonConexion.get_conexion()
