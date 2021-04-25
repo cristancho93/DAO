@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<root>
-  <row>
-    <tipo>Computador AMD</tipo>
-    <memoria>Memoria de 8GB</memoria>
-    <procesador>Procesador AMD RYZEN 7</procesador>
-    <board>Board tipo B550</board>
-    <descripcion>Computador AMD superpoderoso</descripcion>
-    <imagen></imagen>
-  </row>
-  <row>
-    <tipo>Computador INTEL</tipo>
-    <memoria>Memoria de 12GB</memoria>
-    <procesador>Procesador Intel Core I9</procesador>
-    <board>Board tipo Intel DG101GC</board>
-    <descripcion>Computador INTEL superpoderoso</descripcion>
-    <imagen></imagen>
-  </row>
-  <row>
-    <tipo>Computador ALIEN</tipo>
-    <memoria>Memoria de 32GB</memoria>
-    <procesador>Procesador Alien</procesador>
-    <board>Board tipo Alien</board>
-    <descripcion>Computador Alien de otro mundo</descripcion>
-    <imagen></imagen>
-  </row>
-</root>
+<items>
+      <item>
+        <id>0</id>
+        <tipo>Computador AMD</tipo>
+        <memoria>Memoria de 8GB</memoria>
+        <procesador>Procesador AMD RYZEN 7</procesador>
+        <board>Board tipo B550</board>
+        <descripcion>Computador AMD superpoderoso</descripcion>
+        <imagen>sadasdasd</imagen>
+      </item>
+      <item>
+        <id>1</id>
+        <tipo>Computador INTEL</tipo>
+        <memoria>Memoria de 12GB</memoria>
+        <procesador>Procesador Intel Core I9</procesador>
+        <board>Board tipo Intel DG101GC</board>
+        <descripcion>Computador INTEL superpoderoso</descripcion>
+        <imagen>dddddd</imagen>
+      </item>
+      <item>
+        <id>2</id>
+        <tipo>Computador ALIEN</tipo>
+        <memoria>Memoria de 32GB</memoria>
+        <procesador>Procesador Alien</procesador>
+        <board>Board tipo Alien</board>
+        <descripcion>Computador Alien de otro mundo</descripcion>
+        <imagen>aaaaa</imagen>
+      </item>
+  </items>

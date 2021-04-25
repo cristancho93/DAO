@@ -6,15 +6,14 @@ from Util.JSONconexion import JsonConexion
 
 if __name__ == '__main__':
     print("seleccione una fabrica: \n\t 0 - AMD \n\t 1 - Intel \n\t 2 - Alien ")
-    fabricas = [FabricaAMD(), FabricaIntel(), FabricaAlien()]
+    pc = int(input())
+    print("seleccione una conexion: \n\t 0 - JSON \n\t 1 - XML ")
+    conexion = int(input())
+    fabrica = FabricaComputadores()
+    computador = fabrica.crearComputador(pc, conexion)
 
-    fabrica = fabricas[int(input())]
-
-    partes = [fabrica.crearMemoria(), fabrica.crearProcesador(), fabrica.crearBoard()]
-
-    for p in partes:
-        p.implementacion()
-        p.operacion()
-
-    JsonConexion = JsonConexion();
-    JsonConexion.get_conexion()
+    print(computador.getMemoria())
+    print(computador.getBoard())
+    print(computador.getProcesador())
+    print(computador.getImagen())
+    print(computador.getDescripcion())

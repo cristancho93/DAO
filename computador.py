@@ -1,4 +1,4 @@
-class computador:
+class Computador:
     def __init__(self):
         self.procesador = ""
         self.memoria = ""
@@ -20,3 +20,19 @@ class computador:
 
     def setDescripcion(self, descripcion):
         self.descripcion = descripcion
+
+# Creamos lo get para retornar la información
+    def getMemoria(self):
+        return self.memoria
+
+    def getBoard(self):
+        return self.board
+
+    def getProcesador(self):
+        return self.procesador
+
+    def getDescripcion(self):
+        return self.descripcion
+
+    def getImagen(self):
+        return self.imagen
