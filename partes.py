@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from abc import ABC, abstractmethod
+from abc import ABC
 
-import computador
 from DAO_PC.DAO_PC_Interface import ComputadorDAO
 
 class DevolverPc(ABC):
@@ -11,3 +10,12 @@ class DevolverPc(ABC):
             return ComputadorDAO.GetComputadorJSON(self ,id)
         else:
             return ComputadorDAO.GetComputadorXML(self, id)
+
+
+class DevolverPartes(ABC):
+    def getPartes(self,idComputador):
+        return ComputadorDAO.GetAllPartesJSON(self, idComputador)
+
+class DevolverParte(ABC):
+    def getParte(self, idComputador, idPartes):
+        return ComputadorDAO.GetParteById(self, idComputador, idPartes)

@@ -1,6 +1,7 @@
 from Util.XMLConexion import XmlConexion
-from computador import Computador
+from clases.computador import Computador
 from Util.JSONconexion import JsonConexion
+from clases.parte import Parte
 
 class ComputadorDAO:
     def GetComputadorJSON(self ,id):
@@ -9,11 +10,9 @@ class ComputadorDAO:
 
         for c in computadores:
             if(c['id'] == id):
-                computador.setMemoria(c['memoria'])
-                computador.setBoard(c['board'])
-                computador.setProcesador(c['procesador'])
-                computador.setImagen(c['imagen'])
+                computador.setTipoComputador(c['tipo'])
                 computador.setDescripcion(c['descripcion'])
+                computador.setImagen(c['imagen'])
         return computador
 
     def GetComputadorXML(self ,id):
@@ -31,5 +30,27 @@ class ComputadorDAO:
                     esId = True
         return computador
 
+    # Metodo encargado de traer todas las partes de un computador
+    def GetAllPartesJSON(self, idComputador):
+        partes = Parte()
+        conexion = JsonConexion.get_conexion(self)
+        arregloPartes = []
+        i = 0
+        for p in conexion:
+            if (p['id'] == idComputador):
+                for part in conexion[idComputador]["partes"]:
+                    arregloPartes.append( str(i) + " - " + part['parte'])
+                    i = i + 1
 
+        partes.setNombreParte(arregloPartes)
+        return partes
 
+    def GetParteById(self, idComputador, idParte):
+        partes = Parte()
+        conexion = JsonConexion.get_conexion(self)
+        for p in conexion:
+            if (p['id'] == idComputador):
+                 part = conexion[idComputador]["partes"][idParte]
+                 partes.setNombreParte(part["parte"])
+                 partes.setDescripcionParte(part["descripcion"])
+        return partes

@@ -2,28 +2,85 @@
     {
         "id": 0,
         "tipo": "Computador AMD",
-        "memoria": "Memoria de 8GB",
-        "procesador": "Procesador AMD RYZEN 7",
-        "board": "Board tipo B550",
-        "descripcion": "Computador AMD superpoderoso",
-        "imagen": ""
+        "descripcion": "Computador AMD de ultima generacion",
+        "imagen": "",
+        "partes": [
+            {
+                "idParte": "0",
+                "parte": "Disco duro AMD",
+                "descripcion": "Disco duro de 1 Tb"
+            },
+            {
+                "idParte": "1",
+                "parte": "Procesador AMD",
+                "descripcion": "AMD RYZEN 7"
+            },
+            {
+                "idParte": "2",
+                "parte": "Board AMD",
+                "descripcion": "Board tipo B550"
+            },
+            {
+                "idParte": "3",
+                "parte": "Memoria ram AMD",
+                "descripcion": "Ram 4GB"
+            }
+        ]
     },
     {
         "id": 1,
         "tipo": "Computador INTEL",
-        "memoria": "Memoria de 12GB",
-        "procesador": "Procesador Intel Core I9",
-        "board": "Board tipo Intel DG101GC",
-        "descripcion": "Computador INTEL superpoderoso",
-        "imagen": ""
+        "descripcion": "Computador Intel de ultima generacion",
+        "imagen": "",
+        "partes": [
+             {
+                "idParte": "0",
+                "parte": "Disco duro INTEL",
+                "descripcion": "Disco duro de 500 Gb"
+            },
+            {
+                "idParte": "1",
+                "parte": "Procesador INTEL",
+                "descripcion": "AMD RYZEN 7"
+            },
+            {
+                "idParte": "2",
+                "parte": "Board INTEL",
+                "descripcion": "Board intel BZD5600"
+            },
+            {
+                "idParte": "3",
+                "parte": "Memoria ram INTEL",
+                "descripcion": "Ram 8GB"
+            }
+        ]
     },
     {
         "id": 2,
         "tipo": "Computador ALIEN",
-        "memoria": "Memoria de 32GB",
-        "procesador": "Procesador Alien",
-        "board": "Board tipo Alien",
-        "descripcion": "Computador Alien de otro mundo",
-        "imagen": ""
+        "descripcion": "Computador Alien de ultima generacion",
+        "imagen": "",
+        "partes": [
+                         {
+                "idParte": "0",
+                "parte": "Disco duro ALIEN",
+                "descripcion": "Disco duro de 2 Tb"
+            },
+            {
+                "idParte": "1",
+                "parte": "Procesador ALIEN",
+                "descripcion": "ALIEN 10000"
+            },
+            {
+                "idParte": "2",
+                "parte": "Board ALIEN",
+                "descripcion": "Board ALIEN Alien"
+            },
+            {
+                "idParte": "3",
+                "parte": "Memoria ram ALIEN",
+                "descripcion": "Ram 32GB"
+            }
+        ]
     }
 ]
