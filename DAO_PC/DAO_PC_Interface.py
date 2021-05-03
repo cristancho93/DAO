@@ -30,13 +30,10 @@ class ComputadorDAO:
         partes = Parte()
         conexion = JsonConexion.get_conexion(self)
         arregloPartes = []
-        i = 0
         for p in conexion:
             if (p['id'] == idComputador):
                 for part in conexion[idComputador]["partes"]:
-                    arregloPartes.append( str(i) + " - " + part['parte'])
-                    i = i + 1
-
+                    arregloPartes.append(part["idParte"] + " - " + part['parte'])
         partes.setNombreParte(arregloPartes)
         return partes
 
@@ -60,7 +57,19 @@ class ComputadorDAO:
             if(int(c.find("id").text) == idComputador):
                 if(c.find("partes").tag == "partes"):
                     for parte in c.find("partes"):
-                        arregloPartes.append(parte.find("parte").text)
+                        arregloPartes.append(parte.find("idParte").text + " - " + parte.find("parte").text)
         
         partes.setNombreParte(arregloPartes)
-        return arregloPartes
+        return partes
+
+    def GetParteByIdXML(self, idComputador, idParte):
+        partes = Parte()
+        conexion = XmlConexion.get_conexion(self)
+        for c in conexion:
+            if (int(c.find("id").text) == idComputador):
+                if(c.find("partes").tag == "partes"):
+                    for parte in c.find("partes"):
+                        if int(parte.find("idParte").text) == idParte:
+                            partes.setDescripcionParte(parte.find("parte").text)
+                            partes.setDescripcionParte(parte.find("descripcion").text)
+        return partes

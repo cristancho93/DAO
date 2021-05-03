@@ -20,5 +20,8 @@ class DevolverPartes(ABC):
             return ComputadorDAO.GetAllPartesXML(self, idComputador)
 
 class DevolverParte(ABC):
-    def getParte(self, idComputador, idPartes):
-        return ComputadorDAO.GetParteById(self, idComputador, idPartes)
+    def getParte(self, idComputador, idPartes, conexion):
+        if conexion == 0:
+            return ComputadorDAO.GetParteById(self, idComputador, idPartes)
+        else:
+            return ComputadorDAO.GetParteByIdXML(self, idComputador, idPartes)
