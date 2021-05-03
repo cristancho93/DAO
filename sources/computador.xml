@@ -1,30 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <items>
-      <item>
-        <id>0</id>
-        <tipo>Computador AMD</tipo>
-        <memoria>Memoria de 8GB</memoria>
-        <procesador>Procesador AMD RYZEN 7</procesador>
-        <board>Board tipo B550</board>
-        <descripcion>Computador AMD superpoderoso</descripcion>
-        <imagen>sadasdasd</imagen>
-      </item>
-      <item>
-        <id>1</id>
-        <tipo>Computador INTEL</tipo>
-        <memoria>Memoria de 12GB</memoria>
-        <procesador>Procesador Intel Core I9</procesador>
-        <board>Board tipo Intel DG101GC</board>
-        <descripcion>Computador INTEL superpoderoso</descripcion>
-        <imagen>dddddd</imagen>
-      </item>
-      <item>
-        <id>2</id>
-        <tipo>Computador ALIEN</tipo>
-        <memoria>Memoria de 32GB</memoria>
-        <procesador>Procesador Alien</procesador>
-        <board>Board tipo Alien</board>
-        <descripcion>Computador Alien de otro mundo</descripcion>
-        <imagen>aaaaa</imagen>
-      </item>
-  </items>
+   <item>
+      <id>0</id>
+      <descripcion>Computador AMD de ultima generacion</descripcion>
+      <imagen />
+      <partes>
+         <item>
+            <idParte>0</idParte>
+            <descripcion>Disco duro de 1 Tb</descripcion>
+            <parte>Disco duro AMD</parte>
+         </item>
+         <item>
+            <idParte>1</idParte>
+            <descripcion>AMD RYZEN 7</descripcion>
+            <parte>Procesador AMD</parte>
+         </item>
+         <item>
+            <idParte>2</idParte>
+            <descripcion>Board tipo B550</descripcion>
+            <parte>Board AMD</parte>
+         </item>
+         <item>
+            <idParte>3</idParte>
+            <descripcion>Ram 4GB</descripcion>
+            <parte>Memoria ram AMD</parte>
+         </item>
+      </partes>
+      <tipo>Computador AMD</tipo>
+   </item>
+   <item>
+      <id>1</id>
+      <descripcion>Computador Intel de ultima generacion</descripcion>
+      <imagen />
+      <partes>
+         <item>
+            <idParte>0</idParte>
+            <descripcion>Disco duro de 500 Gb</descripcion>
+            <parte>Disco duro INTEL</parte>
+         </item>
+         <item>
+            <idParte>1</idParte>
+            <descripcion>AMD RYZEN 7</descripcion>
+            <parte>Procesador INTEL</parte>
+         </item>
+         <item>
+            <idParte>2</idParte>
+            <descripcion>Board intel BZD5600</descripcion>
+            <parte>Board INTEL</parte>
+         </item>
+         <item>
+            <idParte>3</idParte>
+            <descripcion>Ram 8GB</descripcion>
+            <parte>Memoria ram INTEL</parte>
+         </item>
+      </partes>
+      <tipo>Computador INTEL</tipo>
+   </item>
+   <item>
+      <id>2</id>
+      <descripcion>Computador Alien de ultima generacion</descripcion>
+      <imagen />
+      <partes>
+         <item>
+            <idParte>0</idParte>
+            <descripcion>Disco duro de 2 Tb</descripcion>
+            <parte>Disco duro ALIEN</parte>
+         </item>
+         <item>
+            <idParte>1</idParte>
+            <descripcion>ALIEN 10000</descripcion>
+            <parte>Procesador ALIEN</parte>
+         </item>
+         <item>
+            <idParte>2</idParte>
+            <descripcion>Board ALIEN Alien</descripcion>
+            <parte>Board ALIEN</parte>
+         </item>
+         <item>
+            <idParte>3</idParte>
+            <descripcion>Ram 32GB</descripcion>
+            <parte>Memoria ram ALIEN</parte>
+         </item>
+      </partes>
+      <tipo>Computador ALIEN</tipo>
+   </item>
+</items>

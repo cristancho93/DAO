@@ -22,8 +22,8 @@ class FabricaComputadores(FabricaAbstracta):
     def crearComputador(self, id, conexion):
         return DevolverPc.getComputadorPartes(self, id, conexion)
 
-    def crearPartes(self, idComputador):
-        return DevolverPartes.getPartes(self, idComputador)
+    def crearPartes(self, idComputador, conexion):
+        return DevolverPartes.getPartes(self, idComputador, conexion)
 
     def crearParte(self, idComputador, idParte):
         return DevolverParte.getParte(self, idComputador, idParte)

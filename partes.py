@@ -13,8 +13,11 @@ class DevolverPc(ABC):
 
 
 class DevolverPartes(ABC):
-    def getPartes(self,idComputador):
-        return ComputadorDAO.GetAllPartesJSON(self, idComputador)
+    def getPartes(self,idComputador, conexion):
+        if(conexion == 0):
+             return ComputadorDAO.GetAllPartesJSON(self, idComputador)
+        else: 
+            return ComputadorDAO.GetAllPartesXML(self, idComputador)
 
 class DevolverParte(ABC):
     def getParte(self, idComputador, idPartes):

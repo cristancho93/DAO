@@ -19,17 +19,12 @@ class ComputadorDAO:
         computador = Computador()
         computadores = XmlConexion .get_conexion(self)
         for c in computadores:
-            esId = False
-            for c2 in c:
-                if(c2.text.strip() == str(id) or esId == True):
-                    if (c2.tag == 'memoria'): computador.setMemoria(c2.text.strip())
-                    if (c2.tag == 'board'): computador.setBoard(c2.text.strip())
-                    if (c2.tag == 'procesador'): computador.setProcesador(c2.text.strip())
-                    if (c2.tag == 'imagen'): computador.setImagen(c2.text.strip())
-                    if (c2.tag == 'descripcion'): computador.setDescripcion(c2.text.strip())
-                    esId = True
+            if(int(c.find("id").text) == id):
+                computador.setTipoComputador(c.find("tipo").text)
+                computador.setDescripcion(c.find("descripcion").text)
+                computador.setImagen(c.find("imagen").text)
         return computador
-
+            
     # Metodo encargado de traer todas las partes de un computador
     def GetAllPartesJSON(self, idComputador):
         partes = Parte()
@@ -54,3 +49,18 @@ class ComputadorDAO:
                  partes.setNombreParte(part["parte"])
                  partes.setDescripcionParte(part["descripcion"])
         return partes
+
+
+    def GetAllPartesXML(self, idComputador):
+        partes = Parte()
+        conexion = XmlConexion.get_conexion(self)
+        arregloPartes = []
+        
+        for c in conexion:
+            if(int(c.find("id").text) == idComputador):
+                if(c.find("partes").tag == "partes"):
+                    for parte in c.find("partes"):
+                        arregloPartes.append(parte.find("parte").text)
+        
+        partes.setNombreParte(arregloPartes)
+        return arregloPartes

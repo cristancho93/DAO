@@ -1,6 +1,6 @@
 class Parte:
     def __init__(self):
-        self.nombreParte = "",
+        self.nombreParte = [],
         self.descripcionParte = ""
 
     # Seteamos los valores

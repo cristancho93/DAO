@@ -21,7 +21,7 @@ if __name__ == '__main__':
     print("Ver partes del computador: \n\t 0 - Si \n\t 1 - No")
     decision = int(input())
     if decision == 0:
-        partes = fabrica.crearPartes(pc)
+        partes = fabrica.crearPartes(pc, conexion)
         listaPartes = partes.getNombreParte()
 
         for p in listaPartes:
